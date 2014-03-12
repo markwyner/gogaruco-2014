@@ -37,18 +37,19 @@
     <nav>
       <p class="nav-icon-mobile"><i class="icon-reorder"></i></p>
       <ul>
-        <li class="location-info">UCSF MISSION BAY, SAN FRANCISCO / SEP 12-13, 2014</li>
+        <li class="location-info">UCSF Mission Bay, San Francisco / Sep 12-13, 2014</li>
         <li class="home-id"><a href="/">Home</a></li>
-        <li class="speakers-id"><a href="/speakers.html">Speakers</a></li>
-        <li class="schedule-id"><a href="/schedule.html">Schedule</a></li>
-        <li class="sponsors-id"><a href="/sponsors.html">Sponsors</a></li>
-        <li class="location-id"><a href="/location.html">Location</a></li>
-        <li class="about-id"><a href="/about.html">About</a></li>
+        <li class="speakers-id"><a href="/speakers/">Speakers</a></li>
+        <li class="schedule-id"><a href="/schedule/">Schedule</a></li>
+        <li class="sponsors-id"><a href="/sponsors/">Sponsors</a></li>
+        <li class="location-id"><a href="/location/">Location</a></li>
+        <li class="about-id"><a href="/about/">About</a></li>
+        <li class="cta-id"><a href="#" class="button">Propose a Talk</a></li>
       </ul>
     </nav>
     <div class="masthead">
       <div class="master-column">
-        <h1><%= current_page.data.headline %></h1>
+        <h1><%= current_page.data.headline %><span><%= current_page.data.subhead %></span></h1>
         <p class="logo"><%= image_tag "logo.svg", alt: "2014 Golden Gate Ruby Conference" %></p>
         <p class="cta"><a href="#" class="button">Propose a Talk</a></p>
       </div>
