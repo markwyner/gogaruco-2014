@@ -1,0 +1,138 @@
+/* GLOBALS
+--------------------------------------------------*/
+@import "globals";
+
+/* LINKS
+--------------------------------------------------*/
+a:link,
+a:visited {
+	
+}
+.about .about-id a:link,
+.about .about-id a:visited,
+.home .home-id a:link,
+.home .home-id a:visited,
+.location .location-id a:link,
+.location .location-id a:visited,
+.schedule .schedule-id a:link,
+.schedule .schedule-id a:visited,
+.speakers .speakers-id a:link,
+.speakers .speakers-id a:visited,
+.sponsors .sponsors-id a:link,
+.sponsors .sponsors-id a:visited {
+	color: $color-red-light;
+}
+a:hover {
+	opacity: 0.5;
+	filter:alpha(opacity=5);
+}
+a.button:hover {
+	opacity: 0.8;
+	filter:alpha(opacity=8);
+}
+
+/* TYPOGRAPHY
+--------------------------------------------------*/
+h2 {
+	small {
+		display: block;
+	}
+}
+
+/* STRUCTURE
+--------------------------------------------------*/
+.col-description {
+	@include span-columns(9);
+}
+.col-title {
+	@include span-columns(3);
+}
+footer {
+	.archive {
+		text-align: right;
+		a:last-child {
+			margin: 0;
+		}
+	}
+	p {
+		@include span-columns(6);
+		margin-bottom: 0;
+	}
+}
+header {
+	background: $color-neutral;
+}
+.master-column {
+	padding: 1.25rem 1rem 0.75rem 1rem;
+}
+.masthead {
+	padding: 0 2rem;
+	/*position: relative;*/
+	.cta {
+		position: static;
+		/*left: 50%;*/
+		left: auto;
+		top: auto;
+		/*bottom: -1.75em;*/
+		/*margin-left: -4em;*/
+	}
+	h1 {
+		font-size: 3rem;
+		/*padding-left: 20rem;*/
+	}
+	.logo {
+		padding: .25rem 0 2rem 0;
+		img {
+			height: 8rem;
+		}
+	}
+	.master-column {
+		background: image_url("robot.svg") no-repeat .5rem 1.5rem;
+		background-size: 30% auto;
+	}
+}
+.nav-icon-mobile {
+	display: none;
+}
+
+/* NAVIGATION
+--------------------------------------------------*/
+nav {
+	@include outer-container;
+	padding: 2rem 1.25rem;
+	ul {
+		display: block;
+		padding: 0;
+		background: none;
+		li {
+			display: inline-block;
+			font-size: 1.5rem;
+			line-height: 1;
+			border: 0;
+			text-align: center;
+			a {
+				padding: 0 1rem 0 0;
+			}
+		}
+		.location-info {
+			float: right;
+			font-size: 1rem;
+			padding: .25rem 0 0 0;
+			background: none;
+		}
+	}
+}
+
+/* TABLES
+--------------------------------------------------*/
+table {
+	tr {
+		td:first-child {
+			width: 23.23176%;
+		}
+		td:nth-child(2),
+		th:nth-child(2) {
+			padding-left: 2.35765%;
+		}
+	}
+}

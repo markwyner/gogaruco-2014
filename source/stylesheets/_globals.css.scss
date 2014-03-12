@@ -1,0 +1,31 @@
+/* BOURBON
+--------------------------------------------------*/
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+$max-width: 1100px;
+$grid-columns: 12;
+
+/* COLORS
+--------------------------------------------------*/
+$color-blue-light: #d2edfb;
+$color-blue: #61c3e1;
+$color-blue-medium: #0093c7;
+$color-blue-dark: #016395;
+$color-orange-light: #f5b636;
+$color-orange: #ec7f2d;
+$color-red-light: #ee8975;
+$color-red: #e95868;
+$color-neutral: #2a3439;
+$color-neutral-light: #525865;
+
+/* FONTS
+--------------------------------------------------*/
+@import "http://i.icomoon.io/public/6b53f73ad2/TildeGoGaRuCo/style.css";
+
+@mixin font_display() {
+	font-family: "refrigerator-deluxe", sans-serif;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	text-transform: uppercase;
+}
