@@ -17,25 +17,21 @@ headline: "Sponsors"
 	<div class="master-column sponsors-list">
 		<h2>Diamond</h2>
 		<div>
-			<dl>
-				<dt><%= image_tag "FPO-sponsor-logo.png", alt: "Company Name" %></dt>
-				<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, ipsum architecto impedit saepe velit aliquam quis obcaecati mollitia. Exercitationem, veniam nihil sapiente impedit ea repudiandae fuga saepe consequuntur qui ut.</dd>
-			</dl>
-			<dl>
-				<dt><%= image_tag "FPO-sponsor-logo.png", alt: "Company Name" %></dt>
-				<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, ipsum architecto impedit saepe velit aliquam quis obcaecati mollitia. Exercitationem, veniam nihil sapiente impedit ea repudiandae fuga saepe consequuntur qui ut.</dd>
-			</dl>
+			<% data.sponsors.diamond.each do |sponsor| %>
+				<dl>
+					<dt><%= image_tag sponsor.image, alt: sponsor.name %></dt>
+					<dd><%= sponsor.description %></dd>
+				</dl>
+			<% end %>
 		</div>
 		<h2>Platinum</h2>
 		<div>
-			<dl>
-				<dt><%= image_tag "FPO-sponsor-logo.png", alt: "Company Name" %></dt>
-				<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, ipsum architecto impedit saepe velit aliquam quis obcaecati mollitia. Exercitationem, veniam nihil sapiente impedit ea repudiandae fuga saepe consequuntur qui ut.</dd>
-			</dl>
-			<dl>
-				<dt><%= image_tag "FPO-sponsor-logo.png", alt: "Company Name" %></dt>
-				<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, ipsum architecto impedit saepe velit aliquam quis obcaecati mollitia. Exercitationem, veniam nihil sapiente impedit ea repudiandae fuga saepe consequuntur qui ut.</dd>
-			</dl>
+			<% data.sponsors.platinum.each do |sponsor| %>
+				<dl>
+					<dt><%= image_tag sponsor.image, alt: sponsor.name %></dt>
+					<dd><%= sponsor.description %></dd>
+				</dl>
+			<% end %>
 		</div>
 	</div>
 </div>

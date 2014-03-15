@@ -66,31 +66,27 @@
       <div class="col-description">
         <h3>Diamond Sponsors</h3>
         <ul>
-          <li>logo</li>
-          <li>logo<br />valign</li>
-          <li>logo</li>
-          <li>logo</li>
+          <% data.sponsors.diamond.each do |sponsor| %>
+            <li><%= link_to image_tag(sponsor.image), sponsor.website %></li>
+          <% end %>
         </ul>
         <h3>Platinum Sponsors</h3>
         <ul>
-          <li>logo</li>
-          <li>logo</li>
-          <li>logo</li>
-          <li>logo</li>
+          <% data.sponsors.platinum.each do |sponsor| %>
+            <li><%= link_to image_tag(sponsor.image), sponsor.website %></li>
+          <% end %>
         </ul>
         <h3>Gold Sponsors</h3>
         <ul>
-          <li>logo</li>
-          <li>logo</li>
-          <li>logo</li>
-          <li>logo</li>
+          <% data.sponsors.gold.each do |sponsor| %>
+            <li><%= link_to image_tag(sponsor.image), sponsor.website %></li>
+          <% end %>
         </ul>
         <h3>Silver Sponsors</h3>
         <ul>
-          <li>logo</li>
-          <li>logo</li>
-          <li>logo</li>
-          <li>logo</li>
+          <% data.sponsors.silver.each do |sponsor| %>
+            <li><%= link_to image_tag(sponsor.image), sponsor.website %></li>
+          <% end %>
         </ul>
       </div>
     </div>

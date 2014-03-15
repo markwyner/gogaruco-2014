@@ -6,41 +6,15 @@ subhead: "UCSF Mission Bay, San Francisco, Sep 12-13, 2014"
 
 <div class="content intro">
 	<div class="master-column speakers-home">
-		<div>
-			<%= image_tag "FPO-speaker-lg.jpg", alt: "Speakername Goeshere" %>
-			<dl>
-				<dt>JAMES EDWARD GRAY II</dt>
-				<dd>My Title Here</dd>
-			</dl>
-		</div>
-		<div>
-			<%= image_tag "FPO-speaker-lg.jpg", alt: "Speakername Goeshere" %>
-			<dl>
-				<dt>JAMES EDWARD GRAY II</dt>
-				<dd>My Title Here</dd>
-			</dl>
-		</div>
-		<div>
-			<%= image_tag "FPO-speaker-lg.jpg", alt: "Speakername Goeshere" %>
-			<dl>
-				<dt>JAMES EDWARD GRAY II</dt>
-				<dd>My Title Here</dd>
-			</dl>
-		</div>
-		<div>
-			<%= image_tag "FPO-speaker-lg.jpg", alt: "Speakername Goeshere" %>
-			<dl>
-				<dt>JAMES EDWARD GRAY II</dt>
-				<dd>My Title Here</dd>
-			</dl>
-		</div>
-		<div>
-			<%= image_tag "FPO-speaker-lg.jpg", alt: "Speakername Goeshere" %>
-			<dl>
-				<dt>JAMES EDWARD GRAY II</dt>
-				<dd>My Title Here</dd>
-			</dl>
-		</div>
+		<% data.speakers.all[0, 5].each do |speaker| %>
+			<div>
+				<%= image_tag speaker.image, alt: speaker.name %>
+				<dl>
+					<dt><%= speaker.name %></dt>
+					<dd><%= speaker.session %></dd>
+				</dl>
+			</div>
+		<% end %>
 		<p class="cta-speakers cta-inline"><a href="/speakers.html" class="button">View All Speakers</a></p>
 	</div>
 </div>

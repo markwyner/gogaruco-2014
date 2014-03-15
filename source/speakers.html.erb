@@ -3,43 +3,15 @@ title: "Event Speakers"
 headline: "Speakers"
 ---
 
-<!-- <ol>
-	<li>Speakers:</li>
-	<% data.speakers.name.each do |t| %>
-	<li><%= t %></li>
-	<% end %>
-</ol> -->
-
 <div class="content intro">
 	<div class="master-column speakers-list">
-		<div>
-			<h2>James Edward Gray II</h2>
-			<%= image_tag "FPO-speaker-lg.jpg", alt: "Speakername Goeshere" %>
-			<p>Ron Evans is a software developer who has been active in the free and open source community for over 20 years. As ringleader of The Hybrid Group, he helps clients solve some of their most difficult technical and business problems. Ron has presented at conferences such as GoGaRuCo, RubyConf, FutureRuby, Ignite, L.A. Ruby Conference, Conferencia Rails, and MagmaConf. Ron is an active contributor to many open source projects and created the award-winning KidsRuby, free software to help teach Ruby programming to kids.</p>
-			<p><em>Session: Session Name Goes Here</em><br /><a href="#"><i class="icon-twitter"></i> @speakerhandle</a></p>
-		</div>
-		<div>
-			<h2>James Edward Gray II</h2>
-			<%= image_tag "FPO-speaker-lg.jpg", alt: "Speakername Goeshere" %>
-			<p>Ron Evans is a software developer who has been active in the free and open source community for over 20 years. As ringleader of The Hybrid Group, he helps clients solve some of their most difficult technical and business problems. Ron has presented at conferences such as GoGaRuCo, RubyConf, FutureRuby, Ignite, L.A. Ruby Conference, Conferencia Rails, and MagmaConf. Ron is an active contributor to many open source projects and created the award-winning KidsRuby, free software to help teach Ruby programming to kids.</p>
-			<p><em>Session: Session Name Goes Here</em><br /><a href="#"><i class="icon-twitter"></i> @speakerhandle</a></p>
-		</div>
-		<div>
-			<h2>James Edward Gray II</h2>
-			<%= image_tag "FPO-speaker-lg.jpg", alt: "Speakername Goeshere" %>
-			<p>Ron Evans is a software developer who has been active in the free and open source community for over 20 years. As ringleader of The Hybrid Group, he helps clients solve some of their most difficult technical and business problems. Ron has presented at conferences such as GoGaRuCo, RubyConf, FutureRuby, Ignite, L.A. Ruby Conference, Conferencia Rails, and MagmaConf. Ron is an active contributor to many open source projects and created the award-winning KidsRuby, free software to help teach Ruby programming to kids.</p>
-			<p><em>Session: Session Name Goes Here</em><br /><a href="#"><i class="icon-twitter"></i> @speakerhandle</a></p>
-		</div>
-		<div>
-			<h2>James Edward Gray II</h2>
-			<%= image_tag "FPO-speaker-lg.jpg", alt: "Speakername Goeshere" %>
-			<p>Ron Evans is a software developer who has been active in the free and open source community for over 20 years. As ringleader of The Hybrid Group, he helps clients solve some of their most difficult technical and business problems. Ron has presented at conferences such as GoGaRuCo, RubyConf, FutureRuby, Ignite, L.A. Ruby Conference, Conferencia Rails, and MagmaConf. Ron is an active contributor to many open source projects and created the award-winning KidsRuby, free software to help teach Ruby programming to kids.</p>
-			<p><em>Session: Session Name Goes Here</em><br /><a href="#"><i class="icon-twitter"></i> @speakerhandle</a></p>
-		</div>
+		<% data.speakers.all.each do |speaker| %>
+			<div>
+				<h2><%= speaker.name %></h2>
+				<%= image_tag speaker.image, alt: speaker.name %>
+				<p><%= speaker.description %></p>
+				<p><em>Session: <%= speaker.session %></em><br /><a href="http://twitter.com/<%= speaker.twitter[1..-1] %>"><i class="icon-twitter"></i> <%= speaker.twitter %></a></p>
+			</div>
+		<% end %>
 	</div>
 </div>
-<!-- <div class="content story">
-	<div class="master-column">
-		
-	</div>
-</div> -->
