@@ -1,25 +1,33 @@
 //= require_tree .
 
-// mobile nav toggle
+$(document).ready(function(){
 
-$('.icon-reorder').click(function() {
-	$('nav ul').fadeToggle();
-});
+	// mobile nav toggle
 
-// schedule session descriptions
+	$('.icon-reorder').click(function() {
+		$('nav ul').fadeToggle();
+	});
 
-$('.sessions h3').click(function() {
-	$(this).siblings('.session-description').fadeToggle();
-});
+	// schedule session descriptions
 
-$('.session-description').prepend('<strong><i class="icon-remove"></i></strong>');
+	$('.sessions h3').click(function() {
+		$(this).siblings('.session-description').fadeToggle();
+	});
 
-$('.session-description strong').bind('click',function() {
-	$(this).closest('.session-description').fadeToggle();
-});
+	$('.session-description').prepend('<strong><i class="icon-remove"></i></strong>');
 
-$(document).keyup(function(e) {
-	if (e.keyCode == 27) {
-		$('.session-description').fadeOut();
-	}
+	$('.session-description strong').bind('click',function() {
+		$(this).closest('.session-description').fadeToggle();
+	});
+
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) {
+			$('.session-description').fadeOut();
+		}
+	});
+
+	// styling iframe content
+	
+	// $('#eventbrite').contents().find('.button_css a').css('background','#000');
+
 });
