@@ -21,16 +21,14 @@ subhead: "UCSF Mission Bay, San Francisco, Sep 12-13, 2014"
 <div class="content story">
 	<div class="master-column">
 		<div class="col-title">
-			<h2>The Big Idea</h2>
+			<h2><%= data.index.subhead %></h2>
 		</div>
 		<div class="col-description">
-			<p>San Francisco is the birthplace of the web revolution. Ruby powers many new technologies, from web sites to telphony and desktop applications. Join us for two days of in-depth technical explorations of the most interesting parts of the Ruby landscape, presented by some of the top talents in the Ruby development community. What your ticket gets you:</p>
+			<p><%= data.index.intro %></p>
 			<ul>
-				<li>Admission to two days of talk sessions</li>
-				<li>Access to any after-hour parties</li>
-				<li>Official Conference Swag</li>
-				<li>Breakfast, Lunch and Snacks on both days</li>
-				<li>Access to our fantastic attendees and speakers</li>
+				<% data.index.list.each do |item| %>
+				<li><%= item.item %></li>
+				<% end %>
 			</ul>
 		</div>
 	</div>
