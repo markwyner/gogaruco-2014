@@ -6,11 +6,14 @@ headline: "Speakers"
 <div class="content intro">
 	<div class="master-column speakers-list">
 		<% data.speakers.all.each do |speaker| %>
-			<div>
+			<div id="<%= speaker.anchor %>">
 				<h2><%= speaker.name %></h2>
 				<%= image_tag speaker.image, alt: speaker.name %>
 				<p><%= speaker.description %></p>
-				<p><em>Session: <%= speaker.session %></em><br /><a href="http://twitter.com/<%= speaker.twitter[1..-1] %>"><i class="icon-twitter"></i> <%= speaker.twitter %></a></p>
+				<p>
+					<em>Session: <%= link_to speaker.session, '/schedule/', :fragment => speaker.anchor %></em><br />
+					<a href="http://twitter.com/<%= speaker.twitter[1..-1] %>"><i class="icon-twitter"></i> <%= speaker.twitter %></a>
+				</p>
 			</div>
 		<% end %>
 	</div>
