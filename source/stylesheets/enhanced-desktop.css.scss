@@ -23,12 +23,11 @@ a:visited {
 	color: $color-red-light;
 }
 a:hover {
-	opacity: 0.5;
-	filter:alpha(opacity=5);
+	color: #444;
 }
 a.button:hover {
-	opacity: 0.8;
-	filter:alpha(opacity=8);
+	color: #fff;
+	background: #444;
 }
 
 /* TYPOGRAPHY
@@ -168,19 +167,20 @@ header {
 	div {
 		@include span-columns(6);
 		@include omega(2n);
-		a:hover {
-			opacity: 0.7;
-			filter:alpha(opacity=7);
-		}
 		img {
 			float: right;
-			margin: 0 0 1rem 1rem;
 			width: 8rem;
 			-moz-border-radius: 4rem;
 			-o-border-radius: 4rem;
 			-webkit-border-radius: 4rem;
 			border-radius: 4rem;
 		}
+	}
+	div:nth-child(odd) {
+		padding-right: 1rem;
+	}
+	div:nth-child(even) {
+		padding-left: 1rem;
 	}
 }
 .sponsors-list {
@@ -190,9 +190,14 @@ header {
 			@include span-columns(6);
 			@include omega(2n);
 			dt {
+				float: left;
+				margin: 0 1rem 1rem 0;
 				width: 8rem;
 			}
 		}
+	}
+	h2 {
+		margin-bottom: 2rem;
 	}
 }
 
@@ -253,7 +258,7 @@ header {
 		padding: 0 1rem 0 2rem;
 		background-size: 100% auto;
 		.logo {
-			background: image_url("bubbles.svg") no-repeat right bottom;
+			background: image_url("bubbles.svg") no-repeat right 2rem bottom;
 			background-size: 70% auto;
 			margin-bottom: 0;
 			padding-bottom: 30rem;
@@ -264,6 +269,16 @@ header {
 		.master-column {
 			background-position: .5rem 12.5rem;
 			background-size: 70% auto;
+			.cta {
+				display: block;
+				left: auto;
+				right: 2.5rem;
+				top: auto;
+				bottom: 6.5rem;
+				a {
+					font-size: 1.75rem;
+				}
+			}
 			h1 {
 				font-size: 4rem;
 				margin-left: 0;
@@ -275,6 +290,9 @@ header {
 				}
 			}
 		}
+	}
+	.cta-id {
+		display: none;
 	}
 }
 

@@ -30,5 +30,23 @@
 				</dl>
 			<% end %>
 		</div>
+		<h2>Gold</h2>
+		<div>
+			<% data.sponsors.platinum.each do |sponsor| %>
+				<dl>
+					<dt><%= image_tag sponsor.image, alt: sponsor.name %></dt>
+					<dd><%= sponsor.description %></dd>
+				</dl>
+			<% end %>
+		</div>
+		<h2>Silver</h2>
+		<div>
+			<% data.sponsors.platinum.each do |sponsor| %>
+				<dl>
+					<dt><%= image_tag sponsor.image, alt: sponsor.name %></dt>
+					<dd><%= sponsor.description %></dd>
+				</dl>
+			<% end %>
+		</div>
 	</div>
 </div>

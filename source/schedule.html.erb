@@ -47,9 +47,9 @@
 						<% if event.speaker %>
 							<td>
 								<%= image_tag event.image, alt: event.speaker %>
-								<div>
+								<div id="<%= event.anchor %>">
 									<h3><%= event.name %></h3>
-									<p>by <%= event.speaker %></p>
+									<p>by <%= link_to event.speaker, '/speakers/', :fragment => event.anchor %></p>
 									<p class="session-description">
 										<%= event.description %>
 									</p>
