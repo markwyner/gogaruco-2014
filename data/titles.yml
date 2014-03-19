@@ -1,25 +1,25 @@
 home:
-  - title: "Welcome"
-    headline: "Explore new possibilities in the birthplace of the web revolution"
-    subhead: "UCSF Mission Bay, San Francisco, Sep 12-13, 2014"
+  title: "Welcome"
+  headline: "Explore new possibilities in the birthplace of the web revolution"
+  subhead: "UCSF Mission Bay, San Francisco, Sep 12-13, 2014"
 speakers:
-  - title: "Welcome"
-    headline: "asdf"
+  title: "Event Speakers"
+  headline: "Speakers"
 schedule:
-  - title: "Welcome"
-    headline: "asdf"
+  title: "Event Schedule"
+  headline: "Schedule"
 sponsors:
-  - title: "Welcome"
-    headline: "asdf"
+  title: "Sponsors"
+  headline: "Sponsors"
 location:
-  - title: "Welcome"
-    headline: "asdf"
-about:
-  - title: "Welcome"
-    headline: "asdf"
-register:
-  - title: "Welcome"
-    headline: "asdf"
+  title: "Location"
+  headline: "Location"
+registration:
+  title: "Event Registration"
+  headline: "Registration"
 submissions:
-  - title: "Welcome"
-    headline: "asdf"
+  title: "Submissions"
+  headline: "submissions"
+about:
+  title: "About"
+  headline: "About"

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
 <head>
-  <title><%= "#{current_page.data.title} | Golden Gate Ruby Conference 2014" %></title>
+  <title><%= yield_content :title %> | Golden Gate Ruby Conference</title>
   <meta charset="utf-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,7 +49,10 @@
     </nav>
     <div class="masthead">
       <div class="master-column">
-        <h1><%= current_page.data.headline %><span><%= current_page.data.subhead %></span></h1>
+        <h1>
+          <%= yield_content :headline %>
+          <span><%= yield_content :subhead %></span>
+        </h1>
         <p class="logo"><%= image_tag "logo.svg", alt: "2014 Golden Gate Ruby Conference" %></p>
         <p class="cta"><a href="#" class="button">Propose a Talk</a></p>
       </div>
