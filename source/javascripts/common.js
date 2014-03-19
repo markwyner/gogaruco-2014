@@ -26,6 +26,25 @@ $(document).ready(function(){
 		}
 	});
 
+	// gallery slider
+
+	if (!/iPhone|iPad|iPod|Android|BlackBerry|webOS/i.test(navigator.userAgent)) {
+		confGallery = $('.conference-center-gallery').bxSlider({
+			pager: false,
+			touchEnabled: true
+		});
+		$(document).keyup(function(e) {
+			if (e.keyCode == 37) {
+				confGallery.goToPrevSlide()
+			}
+		});
+		$(document).keyup(function(e) {
+			if (e.keyCode == 39) {
+				confGallery.goToNextSlide()
+			}
+		});
+	}
+
 	// styling iframe content
 	
 	// $('#eventbrite').contents().find('.button_css a').css('background','#000');

@@ -2,11 +2,41 @@
 
 <div class="content intro">
 	<div class="master-column">
-		
+		<h2>Mission Bay Conference Center</h2>
+		<%= image_tag "FPO-conference-center.jpg", alt: "Mission Bay Conference Center", class: "img-float" %>
+		<%= data.location.primary %>
+		<!-- <ul class="conference-center-gallery">
+			<li><%= image_tag "FPO-conference-center.jpg", alt: "Mission Bay Conference Center" %></li>
+			<li><%= image_tag "FPO-conference-center.jpg", alt: "Mission Bay Conference Center" %></li>
+			<li><%= image_tag "FPO-conference-center.jpg", alt: "Mission Bay Conference Center" %></li>
+			<li><%= image_tag "FPO-conference-center.jpg", alt: "Mission Bay Conference Center" %></li>
+		</ul> -->
 	</div>
+</div>
+<div class="iframe">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3153.9544062300133!2d-122.39350389999998!3d37.767667249999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcb08bae8f5ba0a48!2sMission+Bay+Conference+Center!5e0!3m2!1sen!2sus!4v1395182257751" height="450" frameborder="0" style="border:0"></iframe>
 </div>
 <div class="content story">
 	<div class="master-column">
-		
+		<div class="travel-driving">
+			<h2>Driving Directions</h2>
+			<dl>
+				<% data.location.driving.each do |origin| %>
+					<dt><%= origin.title %></dt>
+					<dd><%= origin.description %></dd>
+				<% end %>
+			</dl>
+		</div>
+		<div class="travel-other">
+			<h2>Public Transporation</h2>
+			<dl>
+				<% data.location.publictransit.each do |origin| %>
+					<dt><%= origin.title %></dt>
+					<dd><%= origin.description %></dd>
+				<% end %>
+			</dl>
+			<h2>Parking</h2>
+			<p><%= data.location.parking %></p>
+		</div>
 	</div>
 </div>

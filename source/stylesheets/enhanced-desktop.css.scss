@@ -40,6 +40,20 @@ h2 {
 
 /* STRUCTURE
 --------------------------------------------------*/
+.about-team,
+.speakers-list {
+	div {
+		img {
+			float: left;
+			margin: 0 2rem 2rem 0;
+			width: 12rem;
+			-moz-border-radius: 6rem;
+			-o-border-radius: 6rem;
+			-webkit-border-radius: 6rem;
+			border-radius: 6rem;
+		}
+	}
+}
 .col-description {
 	@include span-columns(9);
 }
@@ -129,6 +143,9 @@ header {
 			-webkit-border-radius: 1rem;
 			border-radius: 1rem;
 			z-index: 100;
+			.icon-remove {
+				cursor: pointer;
+			}
 			strong {
 				display: block;
 				text-align: center;
@@ -198,6 +215,17 @@ header {
 	}
 	h2 {
 		margin-bottom: 2rem;
+	}
+}
+.travel-driving,
+.travel-other {
+	@include span-columns(6);
+}
+.volunteers {
+	@include outer-container;
+	dl {
+		@include span-columns(2);
+		@include omega(6n);
 	}
 }
 
@@ -315,6 +343,10 @@ nav {
 			text-align: center;
 			a {
 				padding: 0 1rem 0 0;
+			}
+			a:hover {
+				opacity: 0.7;
+				filter:alpha(opacity=7);
 			}
 		}
 		.location-info {

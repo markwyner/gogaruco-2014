@@ -5,11 +5,13 @@ headline: "Propose a Talk"
 
 <div class="content intro">
 	<div class="master-column">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, suscipit, natus, ratione similique cumque quae labore iste consectetur ipsum rerum facere at quos molestias esse nulla nemo voluptas illum aliquam.</p>
+		<% data.submissions.list.each do |item| %>
+		<p><%= item.item %></p>
+		<% end %>
 	</div>
 </div>
 <div class="content story">
 	<div class="master-column">
-		<iframe height="1680" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://tilde.wufoo.com/embed/m3ujx7w0v9xi6z/"><a href="https://tilde.wufoo.com/forms/m3ujx7w0v9xi6z/">Fill out my Wufoo form!</a></iframe>
+		<iframe height="1600" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://tilde.wufoo.com/embed/m3ujx7w0v9xi6z/"><a href="https://tilde.wufoo.com/forms/m3ujx7w0v9xi6z/">Fill out my Wufoo form!</a></iframe>
 	</div>
 </div>

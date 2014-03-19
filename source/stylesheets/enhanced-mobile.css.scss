@@ -32,6 +32,13 @@ a.button,button {
 body {
 	padding: 0;
 }
+iframe {
+	width: 100%;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	line-height: 1 !important;
+}
 
 /* TYPOGRAPHY
 --------------------------------------------------*/
@@ -65,6 +72,28 @@ small {
 
 /* STRUCTURE
 --------------------------------------------------*/
+.about-team,
+.speakers-list {
+	background: none !important;
+	div {
+		margin-bottom: 2rem;
+		clear: both;
+		a:link,
+		a:visited,
+		em {
+			color: #fff;
+		}
+		img {
+			float: right;
+			margin: 0 0 2rem 2rem;
+			width: 8rem;
+			-moz-border-radius: 4rem;
+			-o-border-radius: 4rem;
+			-webkit-border-radius: 4rem;
+			border-radius: 4rem;
+		}
+	}
+}
 .content.intro {
 	background: $color-orange;
 	dd,li,p {
@@ -103,6 +132,9 @@ small {
 		}
 	}
 }
+.iframe {
+	background: $color-orange-light;
+}
 footer {
 	color: $color-blue-light;
 	background: $color-neutral;
@@ -117,6 +149,14 @@ footer {
 			margin-right: .5rem;
 		}
 	}
+}
+.img-float {
+	float: right;
+	margin: 0 0 2rem 2rem;
+	-moz-border-radius: 290px;
+	-o-border-radius: 290px;
+	-webkit-border-radius: 290px;
+	border-radius: 290px;
 }
 .master-column {
 	@include outer-container;
@@ -173,16 +213,9 @@ footer {
 	}
 }
 .speakers-list {
-	background: none !important;
 	div {
-		margin-bottom: 2rem;
-		a:link,
-		a:visited,
-		em {
-			color: #fff;
-		}
+		clear: none;
 		img {
-			float: right;
 			margin: 0 0 2rem 2rem;
 			width: 8rem;
 			-moz-border-radius: 4rem;
@@ -239,6 +272,23 @@ footer {
 	}
 	div:last-of-type {
 		border: 0;
+	}
+}
+.volunteers {
+	margin-bottom: 1.5rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid $color-orange-divider;
+	dl {
+		dt {
+			img {
+				max-width: 100%;
+				width: 8rem;
+				-moz-border-radius: 4rem;
+				-o-border-radius: 4rem;
+				-webkit-border-radius: 4rem;
+				border-radius: 4rem;
+			}
+		}
 	}
 }
 
