@@ -24,6 +24,7 @@
   <%= stylesheet_link_tag "styles", media: "screen, handheld, print, projection", rel: "stylesheet" %>
   <%= stylesheet_link_tag "enhanced-mobile", media: "screen and (min-device-width:320px)", rel: "stylesheet" %>
   <%= stylesheet_link_tag "enhanced-desktop", media: "screen and (min-device-width:768px) and (min-width:768px), print, projection", rel: "stylesheet" %>
+  <%= stylesheet_link_tag "https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css", media: "screen, handheld, print, projection", rel: "stylesheet" %>
   <%#= stylesheet_link_tag "jquery.bxslider", media: "screen", rel: "stylesheet" %>
   <!--[if lt IE 9]>
   <%= stylesheet_link_tag "styles", media: "all", rel: "stylesheet" %>
@@ -104,6 +105,7 @@
   <script type="text/javascript" src="//use.typekit.net/xmp2itv.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
   <%= javascript_include_tag "common" %>
   <%#= javascript_include_tag "jquery.bxslider" %>
 </body>
