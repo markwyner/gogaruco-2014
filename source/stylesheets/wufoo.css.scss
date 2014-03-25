@@ -33,6 +33,10 @@ form li.error .desc .req,
 	-webkit-border-radius: 0 !important;
 	border-radius: 0 !important;
 }
+form li.error,
+#errorLi #errorMsgLbl {
+	padding: 1.5rem !important;
+}
 input[type="email"],
 input[type="number"],
 input[type="text"],
