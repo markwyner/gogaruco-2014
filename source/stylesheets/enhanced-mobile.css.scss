@@ -136,9 +136,6 @@ small {
 		}
 	}
 }
-.iframe {
-	background: $color-orange-light;
-}
 footer {
 	color: $color-blue-light;
 	background: $color-neutral;
@@ -161,6 +158,11 @@ footer {
 	-o-border-radius: 290px;
 	-webkit-border-radius: 290px;
 	border-radius: 290px;
+}
+.location {
+	.iframe {
+		background: $color-orange-light;
+	}
 }
 .master-column {
 	@include outer-container;
