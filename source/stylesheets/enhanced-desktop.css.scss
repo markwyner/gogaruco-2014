@@ -82,6 +82,10 @@ footer {
 header {
 	background: $color-neutral;
 }
+iframe {
+	height: 50rem;
+	overflow: scroll;
+}
 .master-column {
 	padding: 1.5rem 1rem 0.75rem 1rem;
 }
