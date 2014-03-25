@@ -98,11 +98,27 @@ small {
 		}
 	}
 }
+.about-team {
+	dt {
+		a {
+			font-family: Helvetica, sans-serif;
+			font-size: .9rem;
+			text-transform: none;
+		}
+		a:hover {
+			opacity: 0.7;
+			filter:alpha(opacity=7);
+		}
+		span {
+			padding: 0 .5rem;
+		}
+	}
+}
 .content.intro {
 	background: $color-orange;
 	dd,li,p {
 		font-size: 1rem;
-		color: #f2dbc9;
+		color: #fff;
 		a:link,
 		a:visited {
 			color: #fff;

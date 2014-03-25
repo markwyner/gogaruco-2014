@@ -54,6 +54,13 @@ h2 {
 		}
 	}
 }
+.about-team {
+	div {
+		img {
+			margin: 0 2rem 3rem 0 !important;
+		}
+	}
+}
 .col-description {
 	@include span-columns(9);
 }

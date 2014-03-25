@@ -18,8 +18,8 @@ registration:
   title: "Event Registration"
   headline: "Registration"
 submissions:
-  title: "Submissions"
-  headline: "submissions"
+  title: "Speaker Submissions"
+  headline: "Propose a Talk"
 about:
   title: "About"
   headline: "About"

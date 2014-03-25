@@ -8,8 +8,10 @@
 				<%= image_tag speaker.image, alt: speaker.name %>
 				<p><%= speaker.description %></p>
 				<p>
-					<em>Session: <%= link_to speaker.session, '/schedule/', :fragment => speaker.anchor %></em><br />
-					<a href="http://twitter.com/<%= speaker.twitter[1..-1] %>"><i class="icon-twitter"></i> <%= speaker.twitter %></a>
+					<%= session_link speaker %>
+					<% unless speaker.twitter.blank? %>
+					<br /><a href="http://twitter.com/<%= speaker.twitter[1..-1] %>"><i class="icon-twitter"></i> <%= speaker.twitter %></a>
+					<% end %>
 				</p>
 			</div>
 		<% end %>

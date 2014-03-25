@@ -42,11 +42,19 @@ activate :livereload
 activate :directory_indexes
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def session_link(speaker)
+    items = [
+              {:klass => 'is-mobile', :link_type => 'mobile_'+speaker.anchor},
+              {:klass => 'is-not-mobile', :link_type => speaker.anchor}
+            ]
+    link = ""
+    items.each do |item|
+      link = link + '<em class="' + item[:klass] + '">Session:' + link_to(speaker.session, '/schedule/', :fragment => item[:link_type]) + '</em>'
+    end
+    link
+  end
+end
 
 set :css_dir, 'stylesheets'
 
