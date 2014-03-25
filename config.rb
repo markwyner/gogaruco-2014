@@ -50,7 +50,7 @@ helpers do
             ]
     link = ""
     items.each do |item|
-      link = link + '<em class="' + item[:klass] + '">Session:' + link_to(speaker.session, '/schedule/', :fragment => item[:link_type]) + '</em>'
+      link = link + '<em class="' + item[:klass] + '">Session: ' + link_to(speaker.session, '/schedule/', :fragment => item[:link_type]) + '</em>'
     end
     link
   end
