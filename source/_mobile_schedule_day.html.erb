@@ -1,21 +1,7 @@
 <% events.each do |event| %>
   <tr class="<%= !event.speaker ? "lunch" : "" %>">
     <td><time><%= event.start %>-<%= event.end %></time></td>
-    <% if event.speaker %>
-      <td>
-        <%= image_tag event.image, alt: event.speaker %>
-        <div id="mobile_<%= event.anchor %>">
-          <h3><%= event.name %></h3>
-          <p>by <%= link_to event.speaker, '/speakers/', :fragment => event.anchor %></p>
-          <p class="session-description">
-            <%= event.description %>
-          </p>
-        </div>
-      </td>
-    <% else %>
-      <td>
-        <h3><%= event.name %></h3>
-      </td>
-    <% end %>
+
+    <%= partial :session, :locals => { event: event } %>
   </tr>
 <% end %>

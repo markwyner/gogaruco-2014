@@ -37,31 +37,19 @@
 				<th>Day 2 <small>- Saturday, Sep 13</small></th>
 			</tr>
 
-			<% ( data.schedule.friday + data.schedule.saturday ).sort_by { |event| event[:start] }.each_slice(2) do |events| %>
-				<tr class="<%= !events.first.speaker ? "lunch" : "" %>">
-					<% events.each_with_index do |event, index| %>
-						<% if index == 0 %>
-							<td><time><%= event.start %>-<%= event.end %></time></td>
-						<% end %>
+			<% saturday = data.schedule.saturday.dup %>
+			<% data.schedule.friday.each do |event| %>
+				  <tr class="<%= !event.speaker ? "lunch" : "" %>">
+				    <td><time><%= event.start %>-<%= event.end %></time></td>
 
-						<% if event.speaker %>
-							<td>
-								<%= image_tag event.image, alt: event.speaker %>
-								<div id="<%= event.anchor %>">
-									<h3><%= event.name %></h3>
-									<p>by <%= link_to event.speaker, '/speakers/', :fragment => event.anchor %></p>
-									<p class="session-description">
-										<%= event.description %>
-									</p>
-								</div>
-							</td>
-						<% else %>
-							<td>
-								<h3><%= event.name %></h3>
-							</td>
-						<% end %>
-					<% end %>
-				</tr>
+				    <%= partial :session, :locals => { event: event } %>
+
+					  <% next_event = saturday.select { |e| event.start == e.start }.first %>
+					  <% if !next_event.nil? %>
+							<% saturday.delete(next_event) %>
+							<%= partial :session, :locals => { event: next_event } %>
+					  <% end %>
+				  </tr>
 			<% end %>
 		</table>
 		<p class="cta-inline"><a href="#" class="button">REGISTER</a></p>
