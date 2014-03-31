@@ -75,6 +75,9 @@ h2 {
 	}
 }
 footer {
+	a:hover {
+		color: $color-red-light;
+	}
 	.archive {
 		text-align: right;
 		a:last-child {
