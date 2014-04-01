@@ -3,6 +3,7 @@
 <div class="content intro">
 	<div class="master-column speakers-home">
 		<% data.speakers.all[0, 5].each do |speaker| %>
+			<% unless speaker.featured.blank? %>
 			<div>
 				<%= image_tag speaker.image, alt: speaker.name %>
 				<dl>
@@ -10,6 +11,7 @@
 					<dd><%= speaker.session %></dd>
 				</dl>
 			</div>
+			<% end %>
 		<% end %>
 		<p class="cta-speakers cta-inline"><a href="/speakers/" class="button">View All Speakers</a></p>
 	</div>

@@ -62,22 +62,11 @@ $(document).ready(function(){
 			description: '1675 Owens Street, Suite 251, San Francisco, CA 94143-3008 | 866-431-8273 | <a href="http://www.acc-missionbayconferencecenter.com/">Website</a>',
 			'marker-size': 'medium',
 			'marker-color': '#e95868',
-			//icon: {
-			//	iconUrl: "/images/robot.svg",
-			//	iconSize: [50, 50], // size of the icon
-			//	iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
-			//	popupAnchor: [0, -25] // point from which the popup should open relative to the iconAnchor
-			//},
 			url: 'http://www.acc-missionbayconferencecenter.com/'
 		}
 	}).addTo(map);
 	marker.eachLayer(function(m) {
 	  m.openPopup();
 	});
-
-
-	// styling iframe content
-	
-	// $('#eventbrite').contents().find('.button_css a').css('background','#000');
 
 });
